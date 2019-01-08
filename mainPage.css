@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    background-color: blueviolet;
+}
+p{
+    text-align: center;
+}
+table{
+    border: 2px;
+    border-style: inset;
+    border-color: blueviolet;
+    padding: 10px;
+    text-align: center;
+    margin-left: 30%;
+}
+tr.even{
+    background-color: silver;
+    padding: 10px;
+}
+tr.odd{
+    background-color: silver;
+    padding: 10px;
+}
+td{
+    padding: 10px;
+}
+td:hover{
+    background-color: palevioletred;
+}
+body{
+    background-image: url("accounting-budget-calculate-3305.jpg");
+}
+img{
+    width: 250px;
+    height: 275px;
+    margin-left: 475px;
+    padding: 20px;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<!--This page finds the volume of a rectangular prism.-->
+<html>
+    <head>
+        <title>Volume of Rectangular Prisms</title>
+        <link href="linkedPageStyle.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Volume of the Rectangular Prism</h1>
+        <!--I created a form here so that the user can input the necessary data used to compute the volume.-->
+        <form name="rectangularPrismData">
+            <p>
+                Please enter the required values:
+            </p>
+            <p>
+                Length: <input type="text" id="length" required="required"/>
+            </p>
+            <p>
+                Width: <input type="text" id="width" required="required"/>
+            </p>
+            <p>
+                Height: <input type="text" id="height" required="required"/>
+            </p>
+            <p>
+                <input type="submit" value="Evaluate" onclick="rectangularPrismVolume()"/>
+            </p>
+        </form>
+        <!--Here I take the data entered from the form and compute the volume using Javascript.
+            Once the calculations are completed I sent an alert to the browser telling the user the answer.
+            I also use an if-else statement to check and make sure the user put in valid numbers.-->
+        <script language="javascript">
+            function rectangularPrismVolume(){
+                var length = parseFloat(document.getElementById('length').value);
+                var width = parseFloat(document.getElementById('width').value);
+                var height = parseFloat(document.getElementById('height').value);
+                var volume = length * width * height;
+                if (length >= 0 && width >=0 && height >=0){
+                    alert("The volume of the rectangular prism is " + volume.toFixed(2) + " units cubed.");
+                } else{
+                    alert("Please enter valid numbers.")
+                }
+            }
+        </script>
+        <img src="art-blocks-colorful-1323587.jpg"/>
+    </body>
+</html>

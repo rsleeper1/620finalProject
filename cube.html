@@ -1,0 +1,38 @@
+<!doctype html>
+<!--This page finds the volume of a cube.-->
+<html>
+    <head>
+        <title>Volume of Cubes</title>
+        <link href="linkedPageStyle.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Volume of the Cube</h1>
+        <!--I created a form here so that the user can input the necessary data used to compute the volume.-->
+        <form name="cubeData">
+            <p>
+                Please enter the required value:
+            </p>
+            <p>
+                Edge Length: <input type="text" id="edgeLength" required="required"/>
+            </p>
+            <p>
+                <input type="submit" value="Evaluate" onclick="cubeVolume()"/>
+            </p>
+        </form>
+        <!--Here I take the data entered from the form and compute the volume using Javascript.
+            Once the calculations are completed I sent an alert to the browser telling the user the answer.
+            I also use an if-else statement to check and make sure the user put in valid numbers.-->
+        <script language="javascript">
+            function cubeVolume(){
+                var edgeLength = parseFloat(document.getElementById('edgeLength').value);
+                var volume = Math.pow(edgeLength, 3);
+                if (edgeLength >= 0){
+                    alert("The volume of the cube is " + volume.toFixed(2) + " units cubed.");
+                } else{
+                    alert("Please enter valid numbers.")
+                }
+            }
+        </script>
+        <img src="art-blocks-colorful-1323587.jpg"/>
+    </body>
+</html>
